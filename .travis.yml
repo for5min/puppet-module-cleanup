@@ -1,8 +1,11 @@
----
-cleanup::max_file_age: '0s'
-
-cleanup::file_type:
-  - '*.xml'
-  - '*.txt'
-
-cleanup::file_path: '/tmp'
+rvm: 1.8.7
+notifications:
+  email:
+      - for5min@github.com
+  env:
+      - PUPPET_VERSION=2.6.18
+      - PUPPET_VERSION=2.7.21
+      - PUPPET_VERSION=3.0.2
+      - PUPPET_VERSION=3.1.1
+      - PUPPET_VERSION=3.2.1
+      - PUPPET_VERSION=3.3.0
