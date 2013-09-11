@@ -1,0 +1,8 @@
+---
+cleanup::max_file_age: '0s'
+
+cleanup::file_type:
+  - '*.xml'
+  - '*.txt'
+
+cleanup::file_path: '/tmp'
