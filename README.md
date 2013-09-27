@@ -11,18 +11,19 @@ Call exmaple
 node 'abc' {
 	 include cleanup
 }
-Yaml
+
+yaml
 ---
 
 cleanup::target:
             tmp:
-               age: '0s'
+               age: '21d'
                path: '/tmp'
                suffix:
                    - '*.xml'
                    - '*.txt'
             vartmp:
-               age: '0s'
+               age: '21d'
                path: '/var/tmp'
                suffix:
                    - '*.xml'
