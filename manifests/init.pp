@@ -4,19 +4,18 @@
 #
 #
 class cleanup (
-  $file_path    = hiera(file_path),
-  $max_file_age = hiera(max_file_age),
-  $file_type    = hiera(file_type),
 ){
-  notify { 'clean_path' :
-       message => " below path start $file_path to clean up"
-     } ->
-  tidy { "cleanup" :
-     path    => $file_path,
-     age     => $max_file_age,
-     rmdirs  => true,
-     recurse => true,
-     matches => $file_type,
-     backup  => false,
+  define remove ( $path, $suffix, $age ) {
+
+     tidy { $name :
+         path    => $path,
+         age     => $age,
+         rmdirs  => true,
+         recurse => true,
+         matches => $suffix,
+         backup  => false,
+      }
   }
+
+  create_resources('cleanup::remove', hiera_hash(cleanup::target))
 }
