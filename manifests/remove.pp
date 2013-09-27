@@ -11,6 +11,6 @@ define cleanup::remove (
     rmdirs  => true,
     recurse => true,
     matches => $suffix,
-    backup => false,
+    backup  => false,
   }
 }
