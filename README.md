@@ -13,10 +13,17 @@ node 'abc' {
 }
 Yaml
 ---
-cleanup::max_file_age: '21d'
 
-cleanup::file_type: 
-  - '*.xml'
-  - '*.txt'
-
-cleanup::file_path: '/tmp'
+cleanup::target:
+            tmp:
+               age: '0s'
+               path: '/tmp'
+               suffix:
+                   - '*.xml'
+                   - '*.txt'
+            vartmp:
+               age: '0s'
+               path: '/var/tmp'
+               suffix:
+                   - '*.xml'
+                   - '*.txt'
