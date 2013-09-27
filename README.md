@@ -8,23 +8,21 @@ This is the cleanup module, and it will remove files which greater than 21 days
 Call exmaple
 -------
 
-node 'abc' {
-	 include cleanup
-}
+    include cleanup
 
 yaml
 ---
 
-cleanup::target:
-            tmp:
-               age: '21d'
-               path: '/tmp'
-               suffix:
-                   - '*.xml'
-                   - '*.txt'
-            vartmp:
-               age: '21d'
-               path: '/var/tmp'
-               suffix:
-                   - '*.xml'
-                   - '*.txt'
+    cleanup::target:
+                tmp:
+                    age: '21d'
+                   path: '/tmp'
+                 suffix:
+                      - '*.xml'
+                      - '*.txt'
+             vartmp:
+                    age: '21d'
+                   path: '/var/tmp'
+                 suffix:
+                      - '*.xml'
+                      - '*.txt'
