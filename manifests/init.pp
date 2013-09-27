@@ -7,14 +7,14 @@ class cleanup (
 ){
   define remove ( $path, $suffix, $age ) {
 
-     tidy { $name :
-         path    => $path,
-         age     => $age,
-         rmdirs  => true,
-         recurse => true,
-         matches => $suffix,
-         backup  => false,
-      }
+    tidy { $name :
+      path    => $path,
+      age     => $age,
+      rmdirs  => true,
+      recurse => true,
+      matches => $suffix,
+      backup  => false,
+    }
   }
 
   create_resources('cleanup::remove', hiera_hash(cleanup::target))
