@@ -11,6 +11,7 @@ describe 'cleanup' do
     }
    }
   }}
-  it { should contain_class('cleanup') }
+  
+  it { should include_class('cleanup') }
 end
 
