@@ -4,6 +4,7 @@
 #
 #
 class cleanup (
+  $target = 'USE_DEFALT'
 ){
-  create_resources(tidy, hiera_hash(cleanup::target))
+  create_resources(tidy, $target)
 }
