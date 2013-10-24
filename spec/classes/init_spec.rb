@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describ 'cleanup' do
+describe 'cleanup' do
 
   let(:hiera_data) {{
     'cleanup::target::tmp' => {
