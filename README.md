@@ -4,6 +4,10 @@ puppet-module-cleanup
 based on tidy
 This is the cleanup module, and it will remove files which greater than 21 days
 
+Why?
+
+we can use it to clean folder as much as we can.
+
 
 Call exmaple
 -------
