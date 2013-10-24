@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'cleanup' do
 
   let(:hiera_data) {{
-    'target' => 'tmp'
+    'cleanup::target' => 'tmp'
   }}
-  it { should include_class('cleanup').with_target('tmp')
+  it { should include_class('cleanup').with('cleanup::target')
   }
 end
 
