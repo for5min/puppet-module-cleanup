@@ -17,12 +17,14 @@ yaml
                 tmp:
                     age: '21d'
                    path: '/tmp'
-                 suffix:
+                matches:
                       - '*.xml'
                       - '*.txt'
+                recurse: 'true'
              vartmp:
                     age: '21d'
                    path: '/var/tmp'
-                 suffix:
+                matches:
                       - '*.xml'
                       - '*.txt'
+                recurse: 'true'
