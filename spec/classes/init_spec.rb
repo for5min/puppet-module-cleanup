@@ -10,7 +10,7 @@ describe 'cleanup' do
     'recurse' => 'true',
    } }
   }}
-  it { should include_class('cleanup').with_target('tmp')
+  it { should include_class('cleanup').with_tidy('tmp')
   }
 end
 
