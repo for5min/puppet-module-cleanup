@@ -1,14 +1,11 @@
 source "https://rubygems.org"
 
 puppetversion = ENV.key?('PUPPET_VERSION') ? "= #{ENV['PUPPET_VERSION']}" : ['>= 2.7']
-gem 'puppet', puppetversion
+gem 'puppet', '>= 2.7','< 3.3.0' 
 gem 'rake'
 gem 'rspec-puppet'
-gem 'hiera'
-gem 'hiera-puppet'
 gem 'hiera-puppet-helper'
 gem 'puppetlabs_spec_helper', '>= 0.1.0'
 gem 'puppet-lint', '>= 0.3.2'
 gem 'facter', '>= 1.7.0', "< 1.8.0"
 gem 'mocha'
-gem 'indirector'
