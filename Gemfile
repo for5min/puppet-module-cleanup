@@ -1,10 +1,6 @@
-source :rubygems
+source "https://rubygems.org"
 
-if ENV.key?('PUPPET_VERSION')
-  puppetversion = "= #{ENV['PUPPET_VERSION']}"
-else
-  puppetversion = ['>= 2.7']
-end
+puppetversion = ENV.key?('PUPPET_VERSION') ? "= #{ENV['PUPPET_VERSION']}" : ['>= 2.7']
 
 gem 'rake'
 gem 'puppet-lint'
