@@ -10,7 +10,7 @@ describe 'cleanup' do
     'recurse' => 'true',
    }
   }}
-  it { should include_class('cleanup').with_tmp({
+  it { should include_class('cleanup').with({
     'age' => '21d',
     'path'    => '/tmp',
     'matches' => '[ "*.xml", "*.txt" ]',
