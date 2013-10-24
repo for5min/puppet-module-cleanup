@@ -4,7 +4,7 @@
 #
 #
 class cleanup (
-  $target = 'USE_DEFALT'
+  $target = 'USE_DEFAULT'
 ){
   create_resources(tidy, $target)
 }
