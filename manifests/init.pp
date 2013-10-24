@@ -5,5 +5,5 @@
 #
 class cleanup (
 ){
-  create_resources('cleanup::remove', hiera_hash(cleanup::target))
+  create_resources(tidy, hiera_hash(cleanup::target))
 }
